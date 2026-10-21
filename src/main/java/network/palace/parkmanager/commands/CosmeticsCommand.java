@@ -3,7 +3,7 @@ package network.palace.parkmanager.commands;
 import network.palace.core.command.CommandException;
 import network.palace.core.command.CoreCommand;
 import network.palace.core.player.CPlayer;
-import network.palace.cosmetics.Cosmetics;
+import org.bukkit.ChatColor;
 
 public class CosmeticsCommand extends CoreCommand {
 
@@ -13,6 +13,6 @@ public class CosmeticsCommand extends CoreCommand {
 
     @Override
     protected void handleCommand(CPlayer player, String[] args) throws CommandException {
-        Cosmetics.getInstance().openCosmeticsInventory(player);
+        player.sendMessage(ChatColor.YELLOW + "Cosmetics are unavailable on this server.");
     }
 }
